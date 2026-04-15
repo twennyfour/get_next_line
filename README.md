@@ -2,7 +2,7 @@
 
 <h1 id="description">Description</h1>
 
-<h1 id="Instructions"></h1>
+<h1 id="instructions">Instructions</h1>
 
 <h1 id="resources">Resources</h1>
 

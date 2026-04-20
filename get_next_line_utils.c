@@ -6,14 +6,14 @@
 /*   By: mleitao <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 14:47:59 by mleitao           #+#    #+#             */
-/*   Updated: 2026/04/20 17:09:18 by mleitao          ###   ########.fr       */
+/*   Updated: 2026/04/20 19:38:17 by mleitao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <stdlib.h>
 
-static size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	const char	*start;
 

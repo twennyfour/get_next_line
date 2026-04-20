@@ -6,11 +6,13 @@
 /*   By: mleitao <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 15:53:19 by mleitao           #+#    #+#             */
-/*   Updated: 2026/04/15 20:32:42 by mleitao          ###   ########.fr       */
+/*   Updated: 2026/04/20 17:09:58 by mleitao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdlib.h>
+#include <unistd.h>
 
 static char	*read_and_store(int fd, char *stash)
 {
@@ -23,7 +25,8 @@ static char	*read_and_store(int fd, char *stash)
 	{
 		bytes_read = read(fd, buffer, BUFFER_SIZE - 1);
 		if (bytes_read < 0)
-			return (free(storage), NULL);
+			return (free(stash), NULL);
+		buffer[bytes_read] = '\0';
 		tmp = stash;
 		stash = ft_strjoin(tmp, buffer);
 		free(tmp);
@@ -41,20 +44,15 @@ char	*extract_line(char *stash)
 		return (NULL);
 	start = stash;
 	stash = ft_strchr(stash, '\n');
-	return (ft_substr(start, 0, stash - start));
+	return (ft_substr(start, stash - start));
 }
 
-char *
-
-	char *
-	get_next_line(int fd)
+char	*get_next_line(int fd)
 {
 	static char	*stash;
-	static int	number;
 	char		*line;
 	char		buf[BUFFER_SIZE];
 
-	increment_number(number);
 	if (fd < 0 || BUFFER_SIZE <= 0 || BUFFER_SIZE >= 1000000)
 		return (NULL);
 	stash = read_and_store(fd, stash);

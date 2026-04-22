@@ -6,7 +6,7 @@
 /*   By: mleitao <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 15:53:19 by mleitao           #+#    #+#             */
-/*   Updated: 2026/04/20 20:27:18 by mleitao          ###   ########.fr       */
+/*   Updated: 2026/04/22 13:49:18 by mleitao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*extract_line(char *stash)
 	start = stash;
 	end = ft_strchr(stash, '\n');
 	if (end)
-		return (ft_substr(start, end + 1 - start));
+		return (ft_substr(start, end - start + 1));
 	return (ft_strjoin(start, ""));
 }
 
@@ -62,7 +62,7 @@ char	*update_stash(char *stash)
 	end = ft_strchr(stash, '\n');
 	if (!end)
 		return (free(stash), NULL);
-	return (ft_memcpy(stash, end + 1, ft_strlen(end + 1)));
+	return (ft_memcpy(stash, end + 1, ft_strlen(end)));
 }
 
 char	*get_next_line(int fd)

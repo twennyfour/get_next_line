@@ -28,6 +28,8 @@ This function continues reading and appending data until it encounters a new lin
 	#include "get_next_line.h"
 	#include <fcntl.h>
 	#include <stdio.h>
+	#include <stdlib.h>
+	#include <unistd.h>
 
 	int	main(void)
 	{

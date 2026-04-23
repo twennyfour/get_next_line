@@ -24,7 +24,7 @@ This function continues reading and appending data until it encounters a new lin
 	```
 
 2. Include [`get_next_line.h`](./get_next_line.h) in your `main.c`:
-   ```c
+	```c
 	#include "get_next_line.h"
 	#include <fcntl.h>
 	#include <stdio.h>

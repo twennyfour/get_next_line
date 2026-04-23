@@ -57,9 +57,9 @@ This function continues reading and appending data until it encounters a new lin
 <h3 id="references">References</h3>
 
 - `man 2 read`
+- Peer discussions
 - [Using ssize_t vs int](https://stackoverflow.com/questions/19224655/using-ssize-t-vs-int)
 - [How do I find the maximum stack size?](https://stackoverflow.com/questions/7535994/how-do-i-find-the-maximum-stack-size)
-- Peer discussions
 
 <h3 id="llm_usage">LLM Usage</h3>
 

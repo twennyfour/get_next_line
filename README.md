@@ -2,7 +2,13 @@
 
 <h1 id="description">Description</h1>
 
-**get_next_line** is a project that implements a function that reads and returns a line from a file descriptor. It uses a static variable to preserve leftover data between calls, allowing successive calls to return successive lines. The bonus supports multiple files descriptors.
+**get_next_line** is a project that implements a function that reads and returns a line from a file descriptor. It uses a static variable to preserve leftover data between calls, allowing successive calls to return successive lines. The bonus part extends this functionality to support multiple file descriptors.
+
+<h3 id="overview">Overview</h3>
+
+This function reads data from a file descriptor in fixed-size chunks into a buffer of size `BUFFER_SIZE`. Since a line may not be fully obtained in a single read, the data is stored in a static variable, allowing the function to retain and reuse it across multiple calls.
+
+This function continues reading and appending data until it encounters a new line character, or reaches the end of the file. If more than one line is read at once, the extra characters are preserved in the static variable and used in subsequent calls.
 
 <h1 id="instructions">Instructions</h1>
 

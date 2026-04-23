@@ -2,6 +2,8 @@
 
 <h1 id="description">Description</h1>
 
+**get_next_line** is a project that implements a function that reads and returns a line from a file descriptor. It uses a static variable to preserve leftover data between calls, allowing successive calls to return successive lines. The bonus supports multiple files descriptors.
+
 <h1 id="instructions">Instructions</h1>
 
 <h3 id="requirements">Requirements</h3>
